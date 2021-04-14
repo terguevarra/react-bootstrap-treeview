@@ -29,6 +29,58 @@ npm install bootstrap@next bootstrap-icons
 
 ## Usage
 
+```Javascript
+import React, { useState } from 'react';
+import ReactBootstrapTreeview from '@terguevarra/react-bootstrap-treeview';
 
+const sampleData = [
+  {
+    "id": 1,
+    "parentId": 0,
+    "label": "Lorem Ipsum"
+  },
+  {
+    "id": 2,
+    "parentId": 0,
+    "label": "Lorem Ipsum"
+  },
+  {
+    "id": 3,
+    "parentId": 1,
+    "label": "Lorem Ipsum"
+  },
+  {
+    "id": 4,
+    "parentId": 2,
+    "label": "Lorem Ipsum"
+  },
+  {
+    "id": 5,
+    "parentId": 3,
+    "label": "Lorem Ipsum"
+  }
+]
+
+function App(){
+    const [data, setData] = useState(sampleData);
+
+    return(
+        <>
+            <ReactBootstrapTreeview list={data}
+                                    idName="id"
+                                    parentIdName="parentId"
+                                    label={rowData => `${rowData.id} - ${rowData.label}`} />
+        </>
+    );
+}
+
+export default App;
+```
 
 ## Props
+|Name|Type|Required|Description|
+|----|-----|-----|-----------|
+|list|Array|Yes|Data to be rendered|
+|idName|String|Yes|Property name of unique identification|
+|parentIdName|String|Yes|Property name of Parent Id|
+|label|String or Function|Yes|Property to be rendered|
