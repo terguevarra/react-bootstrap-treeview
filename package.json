@@ -1,7 +1,8 @@
 {
   "name": "@terguevarra/react-bootstrap-treeview",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "author": "Ruther John Guevarra",
+  "main": "dist/ReactBootstrapTreeview.min.js",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -16,17 +17,19 @@
     "last 3 safari versions"
   ],
   "scripts": {
-    "build": "parcel build src/ReactBootstrapTreeview.js",
+    "build": "rollup -c -o dist/ReactBootstrapTreeview.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html --open"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
-    "parcel-bundler": "^1.12.5"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.5",
+    "rollup": "^2.45.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
