@@ -1,6 +1,6 @@
 {
   "name": "@terguevarra/react-bootstrap-treeview",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "Ruther John Guevarra",
   "main": "dist/ReactBootstrapTreeview.min.js",
   "license": "MIT",
