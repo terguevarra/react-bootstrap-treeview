@@ -1,8 +1,20 @@
 {
   "name": "@terguevarra/react-bootstrap-treeview",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "author": "Ruther John Guevarra",
   "main": "dist/ReactBootstrapTreeview.min.js",
+  "homepage": "https://github.com/terguevarra/react-bootstrap-treeview#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terguevarra/react-bootstrap-treeview.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "treeview",
+    "bootstrap-treeview",
+    "react-bootstrap-treeview"
+  ],
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2"

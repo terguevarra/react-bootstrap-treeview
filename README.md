@@ -81,9 +81,10 @@ export default App;
 ```
 
 ## Props
-|Name|Type|Required|Description|
-|----|-----|-----|-----------|
-|list|Array|Yes|Data to be rendered|
-|idName|String|Yes|Property name of unique identification|
-|parentIdName|String|Yes|Property name of Parent Id|
-|label|String or Function|Yes|Property to be rendered|
+|Name|Type|Default Value|Required|Description|
+|----|-----|-----|-----|-----------|
+|list|Array|-|Yes|Data to be rendered|
+|idName|String|-|Yes|Property name of unique identification|
+|parentIdName|String|-|Yes|Property name of Parent Id|
+|label|String or Function|-|Yes|Property to be rendered|
+|tableClassName|String|table|No|Bootstrap Table class you want to use for the treeview|

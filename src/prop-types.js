@@ -7,7 +7,9 @@ const propTypes = {
     label: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func
-    ]).isRequired
+    ]).isRequired,
+
+    tableClassName: PropTypes.string
 }
 
 export default propTypes;
