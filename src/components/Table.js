@@ -4,7 +4,13 @@ import Row from './Row';
 
 import { ListToTree } from '../utility';
 
-function Table({list, idName, parentIdName, label, padding}){
+function Table({
+    list, 
+    idName, 
+    parentIdName, 
+    label,
+    tableClassName
+}){
     const [treeList, setTreeList] = useState([]);
 
     useEffect(() => {
@@ -15,14 +21,13 @@ function Table({list, idName, parentIdName, label, padding}){
 
     return(
         <>
-            <table className="table">
+            <table className={tableClassName}>
                 <tbody>
                     {treeList.map((row) => (
                         <Row    rowData={row} 
                                 label={label}
                                 idName={idName} 
                                 key={row[idName]}
-                                padding={padding}
                                 isParent={true} />
                     ))}
                 </tbody>
