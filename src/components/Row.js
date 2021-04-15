@@ -15,8 +15,8 @@ function Row({rowData, label, idName, level = 1}){
     return(
         <>
             <tr onClick={toggleRow}>
-                <td width="10%">{rowData.children?.length > 0 && <i className={icon} style={{marginLeft: `${levelNum * 9}px`}}></i>}</td>
-                <td><span style={{marginLeft: `${levelNum * 9}px`}}>{rowLabel}</span></td>
+                <td width="10%">{rowData.children?.length > 0 && <i className={icon} style={{marginLeft: `${levelNum - 1}rem`}}></i>}</td>
+                <td><span style={{marginLeft: `${levelNum - 1}rem`}}>{rowLabel}</span></td>
             </tr>
             {
                 (rowData.children?.length > 0 && isOpen ) && (

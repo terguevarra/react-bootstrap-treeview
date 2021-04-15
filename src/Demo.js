@@ -13,7 +13,6 @@ function Demo(){
         //let response = await (await fetch('http://localhost:1234/sample1mildata.json')).json();
         let response = await (await fetch('http://localhost:1234/sampledata.json')).json();
         setData(response);
-        console.log(response);
     }
     
 
