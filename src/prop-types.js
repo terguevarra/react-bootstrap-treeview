@@ -1,15 +1,35 @@
-import PropTypes from "prop-types";
+import { 
+    arrayOf, 
+    object, 
+    string, 
+    func, 
+    shape, 
+    element,
+    bool, 
+    oneOfType, 
+    oneOf 
+} from "prop-types";
 
 const propTypes = {
-    list: PropTypes.arrayOf(PropTypes.object).isRequired,
-    idName: PropTypes.string.isRequired,
-    parentIdName: PropTypes.string.isRequired,
-    label: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.func
+    list: arrayOf(object).isRequired,
+    idName: string.isRequired,
+    parentIdName: string.isRequired,
+    label: oneOfType([
+        string,
+        func
     ]).isRequired,
-
-    tableClassName: PropTypes.string
+    tableClassName: string,
+    actions: arrayOf(
+        oneOf([
+            func,
+            shape({
+                icon: oneOfType([string, element, func]).isRequired,
+                onClick: func.isRequired,
+                disabled: bool,
+                hidden: bool
+            })
+        ])
+    )
 }
 
 export default propTypes;
