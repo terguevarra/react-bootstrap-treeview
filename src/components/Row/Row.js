@@ -26,7 +26,7 @@ function Row({rowData, label, idName, level = 1}){
                         {rowLabel}
                     </span>
                     <span className={classes.actions}>
-                        actions
+                        
                     </span>
                 </td>
             </tr>
