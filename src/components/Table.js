@@ -9,15 +9,14 @@ function Table({
     idName, 
     parentIdName, 
     label,
-    tableClassName
+    tableClassName,
+    actions
 }){
     const [treeList, setTreeList] = useState([]);
 
     useEffect(() => {
         setTreeList(ListToTree(list, idName, parentIdName));
     }, [list]);
-
-
 
     return(
         <>
@@ -27,6 +26,7 @@ function Table({
                         <Row    rowData={row} 
                                 label={label}
                                 idName={idName} 
+                                actions={actions}
                                 key={row[idName]}
                                 isParent={true} />
                     ))}

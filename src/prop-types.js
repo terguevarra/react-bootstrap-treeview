@@ -1,4 +1,4 @@
-import { 
+import PropTypes, { 
     arrayOf, 
     object, 
     string, 
@@ -11,22 +11,23 @@ import {
 } from "prop-types";
 
 const propTypes = {
-    list: arrayOf(object).isRequired,
-    idName: string.isRequired,
-    parentIdName: string.isRequired,
-    label: oneOfType([
-        string,
-        func
+    list: PropTypes.arrayOf(PropTypes.object).isRequired,
+    idName: PropTypes.string.isRequired,
+    parentIdName: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func
     ]).isRequired,
-    tableClassName: string,
-    actions: arrayOf(
-        oneOf([
-            func,
-            shape({
-                icon: oneOfType([string, element, func]).isRequired,
-                onClick: func.isRequired,
-                disabled: bool,
-                hidden: bool
+    tableClassName: PropTypes.string,
+    actions: PropTypes.arrayOf(
+        PropTypes.oneOf([
+            PropTypes.func,
+            PropTypes.shape({
+                icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.func]).isRequired,
+                onClick: PropTypes.func.isRequired,
+                buttonClass: PropTypes.string,
+                disabled: PropTypes.bool,
+                hidden: PropTypes.bool
             })
         ])
     )

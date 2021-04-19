@@ -5,7 +5,8 @@ const useRowStyles = createUseStyles({
         display: 'flex',
         flexGrow: 1,
         justifyContent: 'space-between',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        alignItems: 'center'
     },
     marginLeft: {
         marginLeft: props => `${(props.levelNum + 1) - 1}rem`

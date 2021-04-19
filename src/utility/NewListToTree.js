@@ -3,7 +3,7 @@ const NewListToTree =  (data, idName, parentIdName, id = 0) => {
             .filter((item) => {
                 return item[parentIdName] === id;
             })
-            .map(item => ({ ...item, children: NewListToTree(data, idName, parentIdName, item[idName]) }));
+            .map(item => ({ ...item, __children: NewListToTree(data, idName, parentIdName, item[idName]) }));
 }
 
 export default NewListToTree;
