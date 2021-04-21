@@ -38,7 +38,10 @@ function Actions({ actions, rowData }){
     return(
         <>
             {actions.map((action, i) => (
-                actionType[typeof action]?.(action, i, rowData, classes)
+                <>
+                    {actionType[typeof action]?.(action, i, rowData, classes)}
+                    &nbsp;
+                </>
             ))}
         </>
     );

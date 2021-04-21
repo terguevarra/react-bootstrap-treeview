@@ -1,14 +1,4 @@
-import PropTypes, { 
-    arrayOf, 
-    object, 
-    string, 
-    func, 
-    shape, 
-    element,
-    bool, 
-    oneOfType, 
-    oneOf 
-} from "prop-types";
+import PropTypes from "prop-types";
 
 const propTypes = {
     list: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -23,7 +13,7 @@ const propTypes = {
         PropTypes.oneOf([
             PropTypes.func,
             PropTypes.shape({
-                icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.func]).isRequired,
+                icon: PropTypes.string.isRequired,
                 onClick: PropTypes.func.isRequired,
                 buttonClass: PropTypes.string,
                 disabled: PropTypes.bool,
