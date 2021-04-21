@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import clsx from 'clsx';
 
 import useActionStyles from './Actions.styles';
@@ -13,18 +13,16 @@ const onClick = (e, action, rowData) => {
 }
 
 const actionType = {
-    'function': (action, i, rowData, classes) => {
+    'function': (action, rowData, classes) => {
         return  <button type="button"
-                        key={i}
                         className={clsx('btn', action(rowData).buttonClass, action(rowData).hidden === true ? classes.hidden : '')} 
                         onClick={(e) => onClick(e, action, rowData)}
                         disabled={action(rowData).disabled}>
                             <i className={action(rowData).icon}></i>
                 </button>
     },
-    'object': (action, i, rowData, classes) => {
+    'object': (action, rowData, classes) => {
         return  <button type="button"
-                        key={i}
                         className={clsx('btn', action.buttonClass, action.hidden === true ? classes.hidden : '')} 
                         onClick={(e) => onClick(e, action, rowData)}
                         disabled={action.disabled}>
@@ -38,10 +36,10 @@ function Actions({ actions, rowData }){
     return(
         <>
             {actions.map((action, i) => (
-                <>
-                    {actionType[typeof action]?.(action, i, rowData, classes)}
+                <Fragment key={i}>
+                    {actionType[typeof action]?.(action, rowData, classes)}
                     &nbsp;
-                </>
+                </Fragment>
             ))}
         </>
     );

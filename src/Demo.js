@@ -22,17 +22,18 @@ function Demo(){
                                         idName="ApprovalItemId"
                                         parentIdName="ApprovalItemParentId"
                                         label={rowData => `${rowData.RefNo} - ${rowData.ApprovalItemName}`} 
+                                        tableClassName="table table-sm"
                                         actions={[
                                             {
                                                 icon: 'bi bi-plus',
-                                                buttonClass: 'btn-primary',
+                                                buttonClass: 'btn-primary btn-sm',
                                                 onClick: (e, rowData) => {
                                                     console.log(e, rowData);
                                                 }
                                             },
                                             rowData => ({
                                                 icon: 'bi bi-trash',
-                                                buttonClass: 'btn-danger',
+                                                buttonClass: 'btn-danger btn-sm',
                                                 onClick: (e, rowData) => {
                                                     console.log(e, rowData);
                                                 },
