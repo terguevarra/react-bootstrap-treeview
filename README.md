@@ -1,8 +1,5 @@
 # React Bootstrap Treeview
 
-### CodePen [Demo](https://codepen.io/terguevarra/pen/rNjvbdJ)
-
-
 ## Installation
 
 1. Install Package
@@ -80,7 +77,7 @@ function App(){
 export default App;
 ```
 
-## Props
+## Main Props
 |Name|Type|Default Value|Required|Description|
 |----|-----|-----|-----|-----------|
 |list|Array|-|Yes|Data to be rendered|
@@ -88,3 +85,15 @@ export default App;
 |parentIdName|String|-|Yes|Property name of Parent Id|
 |label|String or Function|-|Yes|Property to be rendered|
 |tableClassName|String|table|No|Bootstrap Table class you want to use for the treeview|
+|actions|Array|-|No|Actions list. You can add buttons to rows.|
+
+
+
+## actions
+|Name|Type|Default Value|Required|Description|
+|----|-----|-----|-----|-----------|
+|icon|String|-|Yes|Bootstrap Icon class _(eg. `bi bi-plus`)_|
+|onClick|Function|-|Yes|This will trigger the function on button click. _(Parameters: `event`, `rowData`)_|
+|buttonClass|String|btn|No|Bootstrap button class _(eg. `btn btn-primary`)_|
+|disabled|bool|false|No|Button is enabled or disabled|
+|hidden|bool|false|No|Button is visible or not|
